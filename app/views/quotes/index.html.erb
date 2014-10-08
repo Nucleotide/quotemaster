@@ -1,0 +1,32 @@
+<h1>Random quote!</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Message</th>
+      <th>Person</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @quotes.each do |quote| %>
+      <tr>
+        <td><%= quote.message %></td>
+        <td><%= quote.person %></td>
+        <td><%= link_to 'Show', quote %></td>
+        <td><%= link_to 'Edit', edit_quote_path(quote) %></td>
+        <td><%= link_to 'Destroy', quote, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<p>
+  --- <br/>
+  <%= @random.message %><br/>
+  ---
+</p>
+<br>
+
+<%= link_to 'New Quote', new_quote_path %>
