@@ -1,6 +1,7 @@
 html{
   margin: 0;
   padding: 0;
+  height: 100%;
 }
 
 
@@ -12,17 +13,14 @@ body {
   line-height: 18px;
   margin: 0;
   padding: 0;
+  min-height: 100%;
 }
 
 #top-block{
-  height: 150px;
+  height: 100px;
   background-color: #494546;
 }
 
-#bottom-block{
-  height: 150px;
-  background-color: #E8866C;
-}
 
 h1{
   color:#494546;
@@ -49,7 +47,7 @@ h2{
   border-bottom-style: solid;
   border-bottom-color: #C5D0C1;
   margin-left: 25%;
-  margin-top: 50px;
+  margin-top: 175px;
 }
 
 p, ol, ul, td {
