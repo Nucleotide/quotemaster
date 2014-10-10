@@ -4,8 +4,10 @@ class QuotesController < ApplicationController
   # GET /quotes
   # GET /quotes.json
   def index
-    @quotes = Quote.all
-    @random = Quote.random_quote
+    previous_id = session[:previous_quote_id]
+    @random = Quote.random_quote(previous_id)
+    id = @random.id
+    session[:previous_quote_id] = id
   end
 
   # GET /quotes/1
